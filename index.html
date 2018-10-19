@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Vue Word Count</title>
+    <title class="t">Vue Word Count</title>
     <link href="css/style.css" rel="stylesheet" type="text/css"></link>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Vue Word Count</h1>
+    <h1 class='text-light'>Vue Word Count</h1>
     <div class="container">
       <div id="app">
         <div v-cloak class="container-fluid">
@@ -22,13 +22,14 @@
             <div class="col-sm-12">
               <button v-on:click="paragraphCount">Evaluate</button>
             </div>
-          <div class="row mt-3">
-            <div class="col-sm-12">
-              <p v-if="paragraphs > 0">The number of paragraphs are {{paragraphs}}.</p>
-              <p v-if="sentences >0">The number of sentences are {{sentences}}.</p>
-              <p v-if="words > 0">The number of words are {{words}}.</p>
-              <p v-if="characters > 0">The number of characters are {{characters}}</p>
-
+          <div class="row mt-3 results ">
+            <div class="col-sm-12  text-light"v-if="paragraphs > 0">
+              <p>The number of paragraphs are {{paragraphs}}.</p>
+              <p>The number of sentences are {{sentences}}.</p>
+              <p>The number of words are {{words}}.</p>
+              <p>The number of characters are {{characters}}</p>
+              <p>The longest word is {{longestword}}.</p>
+              <p>The most popular character is {{popularcharacter}}.</p>
             </div>
         </div>
       </div>
